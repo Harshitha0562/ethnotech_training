@@ -111,7 +111,7 @@ class TwoD_array
 }
 */
 
-
+/*
 //count the occurence of a number
 class TwoD_array
 {
@@ -140,8 +140,29 @@ class TwoD_array
         }
     }
 }
+*/
 
 
+/*
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class TwoD_array{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int[][] arr=new int[3][];
+        arr[0]=new int[3];
+        arr[1]=new int[2];
+        arr[2]=new int[1];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println(Arrays.deepToString(arr));
+    }
+}
+*/
 
 /*
 //printing the max and min element in the given 2d array and printing it's position
@@ -254,3 +275,40 @@ class twoD_array
     }
 }
 */
+
+
+//tranpose
+public class TwoD_array{
+    public static void main(String[] args) {
+        int arr[][]={
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+        int n=arr.length;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr[i].length; j++) {
+                int temp=arr[j][i];
+                arr[j][i]=arr[i][j];
+                arr[i][j]=temp;
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            int l=0;
+            int r=arr.length-1;
+            while(l<r){
+                int temp=arr[i][l];
+                arr[i][l]=arr[i][r];
+                arr[i][r]=temp;
+                l++;
+                r--;
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
