@@ -46,7 +46,8 @@ public class day7 {
         int o=e+arr1.length/2;
         for(int i=0;i<arr1.length;i++){
             arr1[i]=arr[i];
-            if((i+1)%2==0){
+            if((i+1)%2==0)
+            {
                 arr1[e++]=arr[i];
             }
             else{
@@ -56,3 +57,5 @@ public class day7 {
         System.out.println(Arrays.toString(arr1));
     }
 }
+
+
