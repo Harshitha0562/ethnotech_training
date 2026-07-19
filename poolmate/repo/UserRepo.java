@@ -1,0 +1,8 @@
+package org.project.poolmate.repo;
+
+import org.project.poolmate.entity.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepo extends JpaRepository<UserEntity,Integer> {
+    public UserEntity findByEmail(String email);
+}
